@@ -145,13 +145,17 @@ public class MainActivity extends AppCompatActivity {
 
         messageList.add(message);
         mAdapter.notifyDataSetChanged();
-        msg = msg.replace(" ","+");
+        //msg = msg.replace(" ","+");
         sendMessageToServer(msg);
     }
 
     private void sendMessageToServer(final String msg)
     {
         String url = Config.URL+"?apiKey="+Config.apiKey+"&message="+msg+"&chatBotID="+Config.chatBotID+"&externalID="+Config.externalID;
+
+        String ALLOWED_URI_CHARS = "@#&=*+-_.,:!?()/~'%";
+        url = Uri.encode(url, ALLOWED_URI_CHARS);
+
         JsonObjectRequest jsonObjectRequest= new JsonObjectRequest(Request.Method.GET, url,null,
                 new Response.Listener<JSONObject>() {
                     @Override
