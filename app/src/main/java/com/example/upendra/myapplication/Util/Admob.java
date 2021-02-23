@@ -67,7 +67,7 @@ public class Admob {
     public static void loadInterstitial() {
 
         mInterstitial.loadAd(new AdRequest.Builder().
-                addTestDevice("ca-app-pub-6614596976194381/9647882393").//ca-app-pub-3940256099942544/1033173712
+                addTestDevice("ca-app-pub-6614596976194381/9647882393").//ca-app-pub-6614596976194381/9647882393
                 build());
     }
 
@@ -80,7 +80,7 @@ public class Admob {
     public static void createLoadBanner(final Context context, View view) {
         mAdView = (AdView) view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().
-                addTestDevice("ca-app-pub-6614596976194381/9647882393                                                                                                                                                                                                                                                                                                                                                                                                                                       ").//ca-app-pub-6614596976194381/9647882393
+                addTestDevice("ca-app-pub-6614596976194381/9647882393").//ca-app-pub-6614596976194381/9647882393
                 build();
         mAdView.loadAd(adRequest);
 
