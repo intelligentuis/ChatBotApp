@@ -24,7 +24,7 @@ public class Admob {
         mInterstitial.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
-                // TODO Auto-generated method stub
+                // TODO Auto-generated method stub @@@@
                 showInterstitial();
             }
 
