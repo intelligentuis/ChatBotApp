@@ -39,10 +39,12 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.upendra.myapplication.Model.Message;
 import com.example.upendra.myapplication.R;
+import com.example.upendra.myapplication.Util.Admob;
 import com.example.upendra.myapplication.Util.Config;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -84,15 +86,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AdView adView = new AdView(this);
+        //MobileAds.initialize(this, "ca-app-pub-6614596976194381~6139882229");
 
-        adView.setAdSize(AdSize.BANNER);
+        //   --- Admob ---
+        View view = getWindow().getDecorView().getRootView();
 
-        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+        Admob.createLoadBanner(getApplicationContext(), view);
+        Admob.createLoadInterstitial(getApplicationContext(),null);
+        //   --- *** ---
 
+
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-        
+
         
         btnSend = (Button) findViewById(R.id.btnSend);
         inputMsg = (EditText) findViewById(R.id.inputMsg);
@@ -133,6 +140,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendMessage()
     {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         String msg = inputMsg.getText().toString().trim();
 
         if( msg.length()==0) {
