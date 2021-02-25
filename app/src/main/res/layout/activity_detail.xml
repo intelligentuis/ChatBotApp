@@ -33,7 +33,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 >
-                <com.example.upendra.myapplication.customfonts.MyEditText
+                <com.sadi9.upendra.myapplication.customfonts.MyEditText
                     android:textSize="16dp"
                     android:id="@+id/firstname"
                     android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                     android:layout_marginRight="60dp"
                     android:layout_height="1dp"
                     android:background="@color/signintext" />
-                <com.example.upendra.myapplication.customfonts.MyEditText
+                <com.sadi9.upendra.myapplication.customfonts.MyEditText
                     android:textSize="16dp"
                     android:id="@+id/lastname"
                     android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                     android:layout_marginRight="60dp"
                     android:layout_height="1dp"
                     android:background="@color/signintext" />
-                <com.example.upendra.myapplication.customfonts.MyEditText
+                <com.sadi9.upendra.myapplication.customfonts.MyEditText
                     android:textSize="16dp"
                     android:id="@+id/gender"
                     android:drawablePadding="35dp"
@@ -113,7 +113,7 @@
             />
     </FrameLayout>
 
-    <com.example.upendra.myapplication.customfonts.MyTextView
+    <com.sadi9.upendra.myapplication.customfonts.MyTextView
         android:id="@+id/signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

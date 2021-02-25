@@ -1,6 +1,5 @@
-package com.example.upendra.myapplication.Activity;
+package com.sadi9.upendra.myapplication.Activity;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,21 +7,15 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
-import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,35 +27,22 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.upendra.myapplication.Model.Message;
+import com.sadi9.upendra.myapplication.Model.Message;
 import com.example.upendra.myapplication.R;
-import com.example.upendra.myapplication.Util.Admob;
-import com.example.upendra.myapplication.Util.Config;
+import com.sadi9.upendra.myapplication.Util.Admob;
+import com.sadi9.upendra.myapplication.Util.Config;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
-import org.xml.sax.Parser;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
-
-import static android.R.id.message;
 
 public class MainActivity extends AppCompatActivity {
 
